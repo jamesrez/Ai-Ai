@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Futura2';
+  src: url('/assets/Futura.woff')  format('WOFF'),
+  url('/assets/Futura.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+body{
+  overflow: hidden;
+  background-color: #ff72c0;
+  height:100%;
+  margin: 0;
+  font-family: Futura, "Futura2", "Trebuchet MS", Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color : white;
+  margin: 15px;
+}
+
+.mainTitle {
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: -50px;
+}
+
+.mainAbout {
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.topContent {
+  display: flex;
+  flex-direction: row;
+  width : 80%;
+  height : 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.bottomContent {
+  display: flex;
+  flex-direction: row;
+  width : 80%;
+  height : 100%;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.featured {
+  width : 150px;
+  height : 150px;
+  background: #f9518d;
+  border : 3px solid #ffd9df;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.featured:hover {
+  background : #f53e80;
+}
