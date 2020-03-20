@@ -71,8 +71,18 @@ body{
   border : 3px solid #ffd9df;
   cursor: pointer;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding : 8px;
 }
 
 .featured:hover {
   background : #f53e80;
+}
+
+.featuredImg {
+  height : 140;
+  max-width: 150;
 }
