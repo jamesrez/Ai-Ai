@@ -2,6 +2,10 @@ link(rel='stylesheet' href='./index.css')
 
 head
   title AI-AI
+  script(src="https://js.stripe.com/v3/")
+  script(src='./scripts/money-input.min.js')
+  script(src="./scripts/axios.min.js")
+
 
 .app
 
@@ -20,6 +24,16 @@ head
   .main
     .mainTitle AI-AI
     .mainAbout Showcasing the Best in Artificial Intelligence and Amazing Inventions
+    if funded
+      .mainFunded Thanks for Funding the Project!
+    else 
+      .mainFund Fund the Project
+      .fund
+        .fundAmountLabel How much would you like to fund?
+        .amountInput
+          .dollar $
+          input.fundAmountInput(type="text" placeholder="50,000")
+        .fundSubmit Submit Fund
     
   .bottomContent
     .five.featured
