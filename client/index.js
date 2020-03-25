@@ -32,3 +32,16 @@ fundSubmit.addEventListener('click', () => {
     })
   }
 })
+
+document.body.addEventListener('click', () => {
+  startAudio()
+})
+
+let audioPlaying = false;
+var audio = new Audio('./assets/glasstown.mp3');
+function startAudio(){
+  if(!audioPlaying){
+    audioPlaying = true;
+    audio.play();
+  }
+}
