@@ -188,3 +188,53 @@ body{
   height : 140;
   max-width: 150;
 }
+
+.featuredContent {
+  display: none;
+  flex-direction: column;
+  background: #d82263;
+  border : 3px solid white;
+  border-radius: 8px;
+  pointer-events: all;
+  padding : 8px 16px;
+  align-items: center;
+  position: absolute;
+  z-index: 6;
+}
+
+.featuredName {
+  color : white;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin: 8;
+}
+
+.featuredDesc {
+  color : white;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  margin-top : 16;
+}
+
+.featuredVideo {
+  background : black;
+}
+
+.featuredCloseBtn {
+  margin-top: 10px;
+  border : 3px solid white;
+  border-radius: 18px;
+  padding: 6px 16px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  color : white;
+  background: #f748af;
+  pointer-events: all;
+}
+
+.featuredCloseBtn:hover{
+  background : #de3f9d;
+}

@@ -6,6 +6,7 @@ head
   script(src='./scripts/money-input.min.js')
   script(src="./scripts/axios.min.js")
   script(src="https://aframe.io/releases/1.0.4/aframe.min.js")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
 
 body
   .aframe
@@ -23,11 +24,11 @@ body
     .nav
     
     .topContent
-      .one.featured
+      .one.featured#one
         img.featuredImg(src='./assets/robot1.png')
-      .two.featured
+      .two.featured#two
         img.featuredImg(src='./assets/robot2.png')
-      .three.featured
+      .three.featured#three
         img.featuredImg(src='./assets/robot3.png')
       .four.featured
         img.featuredImg(src='./assets/robot4.png')
@@ -55,6 +56,13 @@ body
         img.featuredImg(src='./assets/robot7.png')
       .eight.featured
         img.featuredImg(src='./assets/robot8.png')
+        
+    .featuredContent
+      .featuredName
+      iframe.featuredVideo(width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="")
+      .featuredDesc
+      .featuredCloseBtn CLOSE    
+        
         
     .footer
   

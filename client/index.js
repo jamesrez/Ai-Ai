@@ -33,8 +33,8 @@ fundSubmit.addEventListener('click', () => {
   }
 })
 
-document.body.addEventListener('click', () => {
-  startAudio()
+$(document.body).on('click', (e) => {
+  startAudio();
 })
 
 let audioPlaying = false;
@@ -45,3 +45,40 @@ function startAudio(){
     audio.play();
   }
 }
+
+const robots = {
+
+  one : {
+    video : 'https://www.youtube.com/embed/86jfIiBGWqw',
+    thumbnail : './assets/robot1.png',
+    name : "Kiwi Robot",
+    description : "Kiwi delivers food and medical supplies to those around its area."
+  },
+
+  two : {
+    video : 'https://www.youtube.com/embed/dQWEOhXB70M',
+    name : 'Miim',
+    description : "Miim is a feminine-looking humanoid robot created by the National Institute of Advanced Industrial Science and Technology"
+  },
+
+  three : {
+    video : 'https://www.youtube.com/embed/f4sLFrprfbw',
+    name : "Pepper",
+    description : "Pepper is a family-friendly robot that can help out around the house."
+  }
+
+}
+
+
+$('.featured').on('click', (e) => {
+  const robotNum = e.currentTarget.id;
+  const robot = robots[robotNum];
+  $('.featuredContent').css('display', 'flex');
+  $('.featuredVideo').attr('src', robot.video);
+  $('.featuredName').text(robot.name);
+  $('.featuredDesc').text(robot.description);
+})
+
+$('.featuredCloseBtn').on('click', (e) => {
+  $('.featuredContent').css('display', 'none');
+})
