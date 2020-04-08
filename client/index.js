@@ -65,6 +65,36 @@ const robots = {
     video : 'https://www.youtube.com/embed/f4sLFrprfbw',
     name : "Pepper",
     description : "Pepper is a family-friendly robot that can help out around the house."
+  },
+
+  four : {
+    video : 'https://www.youtube.com/embed/wOHYoe92jX0',
+    name : "Asimo",
+    description : "Asimo is a cute, walking robot that would like to be your friend."
+  },
+
+  five : {
+    video : 'https://www.youtube.com/embed/zT-hhkvnmUw',
+    name : "Sophia",
+    description : "Sophia is an advanced humanoid that wants humans and robots to be united."
+  },
+
+  six : {
+    video : 'https://www.youtube.com/embed/wgzklGy4s8g',
+    name : "Mark 1",
+    description : "A new and passionate relationship awaits for you and the Mark 1."
+  },
+
+  seven : {
+    video : 'https://www.youtube.com/embed/qyfxryvt9KU',
+    name : "JiaJia",
+    description : "JiaJia is very happy to become your robot companion."
+  },
+
+  eight : {
+    video : 'https://www.youtube.com/embed/C4SX4ycmlgA',
+    name : "Titan",
+    description : "Titan is bound to keep you entertained for the future."
   }
 
 }
