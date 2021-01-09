@@ -3,11 +3,11 @@ const app = express();
 const stripe = require('stripe')(process.env.STRIPE_SECRET || 'sk_test_AD06t8AX4i615N3hTdrlUAvv00LVhgyd3Y');
 var server = require('http').Server(app);
 
-app.set('views', './client')
+app.set('views', 'client')
 app.set('view engine', 'pug');
 app.use(express.json())
 app.use(express.static('client'));
-//
+
 // let checkAuth = function (req, res, next) {
 //   if (typeof req.cookies.userToken === 'undefined' || req.cookies.userToken === null) {
 //     req.user = null;
@@ -51,7 +51,8 @@ app.post('/fund', (req, res) => {
     res.send({id : session.id});
   }
   createStripeSession();
-})
+});
+
 
 
 server.listen(process.env.PORT || '3001', () => {

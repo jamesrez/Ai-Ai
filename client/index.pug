@@ -27,41 +27,40 @@ body
       .one.featured#one
         img.featuredImg(src='./assets/robot1.png')
       .two.featured#two
-        img.featuredImg(src='./assets/robot2.png')
+        img.featuredImg(src='./assets/miim.png')
       .three.featured#three
-        img.featuredImg(src='./assets/robot3.png')
+        img.featuredImg(src='./assets/pepper.png')
       .four.featured#four
         img.featuredImg(src='./assets/Asimo.png')
       
     .main
       .mainTitle AI-AI
       .mainAbout Showcasing the Best in Artificial Intelligence and Amazing Inventions
-      if funded
-        .mainFunded Thanks for Funding the Project!
-      else 
-        .mainFund Fund the Project
-        .fund
-          .fundAmountLabel How much would you like to fund?
-          .amountInput
-            .dollar $
-            input.fundAmountInput(type="text" placeholder="50,000")
-          .fundSubmit Submit Fund
+      .mainLearn Learn More
+      .learn
+        .learnModal
+          .learnHeader About AI-AI
+          .learnDesc AI-AI is an upcoming online store for the best robots around the world.
       
     .bottomContent
       .five.featured#five
-        img.featuredImg(src='./assets/sophia.png')
+        img.featuredImg(src='./assets/sophia-new.png')
       .six.featured#six
-        img.featuredImg(src='./assets/mark1.png')
+        img.featuredImg(src='./assets/mark1-new.png')
       .seven.featured#seven
-        img.featuredImg(src='./assets/jiajia.png')
+        img.featuredImg(src='./assets/jiajia-new.png')
       .eight.featured#eight
         img.featuredImg(src='./assets/titan.png')
-        
-    .featuredContent
-      .featuredName
-      iframe.featuredVideo(width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="")
-      .featuredDesc
-      .featuredCloseBtn CLOSE    
+    
+    .featuredContainer
+      .featuredModal
+        .featuredName
+        iframe.featuredVideo(width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="")
+        .featuredDesc   
+        .featuredBuy
+          .buyPrice Selling at $2500
+          .buyBtn Order Now
+
         
         
     .footer
