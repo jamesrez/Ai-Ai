@@ -245,7 +245,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .buyPrice {
@@ -254,7 +254,7 @@ body{
 }
 
 .buyBtn {
-  margin-top: 8px;
+  margin-top: 12px;
   border : 3px solid white;
   border-radius: 18px;
   padding: 6px 16px;

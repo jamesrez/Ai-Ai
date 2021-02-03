@@ -2,22 +2,8 @@ link(rel='stylesheet' href='./index.css')
 
 head
   title AI-AI
-  script(src="https://js.stripe.com/v3/")
-  script(src='./scripts/money-input.min.js')
-  script(src="./scripts/axios.min.js")
-  script(src="https://aframe.io/releases/1.0.4/aframe.min.js")
-  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-
+  
 body
-  .aframe
-    a-scene(vr-mode-ui="enabled: false")
-      a-assets
-        a-asset-item(id="city-obj" src="./assets/city.obj")
-        a-asset-item(id="city-mtl" src="./assets/city.mtl")
-      a-entity(obj-model="obj: #city-obj; mtl: #city-mtl" rotation="0 90 0" position="0 0 -6" scale="0.15 0.15 0.15")
-      a-sky(src="./assets/galactic.jpg" repeat="10 10")
-      a-box(position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9")
-      a-camera(position="-35 24 33")
 
   .app
 
@@ -64,5 +50,22 @@ body
         
         
     .footer
-  
+
+script(src="https://js.stripe.com/v3/")
+script(src='./scripts/money-input.min.js')
+script(src="./scripts/axios.min.js")
+script(src="https://aframe.io/releases/1.0.4/aframe.min.js")
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
 script(src="./index.js")
+
+
+.aframe
+  a-scene(vr-mode-ui="enabled: false")
+    a-assets
+      a-asset-item(id="city-obj" src="./assets/city.obj")
+      a-asset-item(id="city-mtl" src="./assets/city.mtl")
+    a-entity(obj-model="obj: #city-obj; mtl: #city-mtl" rotation="0 90 0" position="0 0 -6" scale="0.15 0.15 0.15")
+    a-sky(src="./assets/galactic.jpg" repeat="10 10")
+    a-box(position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9")
+    a-camera(position="-35 24 33")
+  
