@@ -92,7 +92,7 @@ const robots = {
     video : 'https://www.youtube.com/embed/wgzklGy4s8g',
     name : "Mark 1",
     description : "A new and passionate relationship awaits for you and the Mark 1.",
-    price: 8000
+    price: 7000
   },
 
   seven : {
