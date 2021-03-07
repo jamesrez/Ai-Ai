@@ -106,7 +106,7 @@ body{
   background: #d822639c;
   width: 500px;
   max-width: 90%;
-  margin-top: 250px;
+  margin-top: 150px;
 }
 
 .learnHeader {
@@ -117,7 +117,9 @@ body{
 }
 
 .learnDesc {
-  font-size: 20px;
+  font-size: 17px;
+  width: 100%;
+  margin-bottom: 8px;
 }
 
 .dollar {
