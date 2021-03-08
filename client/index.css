@@ -122,6 +122,18 @@ body{
   margin-bottom: 8px;
 }
 
+.learnEmail {
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 16px;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 .dollar {
   margin-top: 10px;
   color : white;
