@@ -75,9 +75,9 @@ const robots = {
   },
 
   four : {
-    video : 'https://www.youtube.com/embed/wOHYoe92jX0',
-    name : "Asimo",
-    description : "Asimo is a cute, walking robot that would like to be your friend.",
+    video : 'https://www.youtube.com/embed/fDa5fLmBw8E',
+    name : "NAO",
+    description : "NAO is a cute, talking robot that would like to be your friend.",
     price: 20000
   },
 
