@@ -57,7 +57,7 @@ const robots = {
     thumbnail : './assets/robot1.png',
     name : "Kiwi Robot",
     description : "Kiwi delivers food and medical supplies to those around its area.",
-    price: 800
+    price: 10000
   },
 
   two : {
@@ -71,7 +71,7 @@ const robots = {
     video : 'https://www.youtube.com/embed/f4sLFrprfbw',
     name : "Pepper",
     description : "Pepper is a family-friendly robot that can help out around the house.",
-    price: 2500
+    price: 35000
   },
 
   four : {
