@@ -137,7 +137,7 @@ $('.featured').on('click', (e) => {
   $('.buyBtn').on('click', async (e) => {
     const checkoutId = (await axios.post('/order/checkout', {
       robotNum
-    });
+    }));
     stripe.redirectToCheckout({
       sessionId: checkoutId
     }).then(function (result) {
