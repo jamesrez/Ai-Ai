@@ -135,11 +135,11 @@ $('.featured').on('click', (e) => {
   $('.buyPrice').text(`Selling at $${robot.price}`);
   $('.buyBtn').off('click');
   $('.buyBtn').on('click', async (e) => {
-    const checkoutId = (await axios.post('/order/checkout', {
+    const res = (await axios.post('/order/checkout', {
       robotNum
     }));
     stripe.redirectToCheckout({
-      sessionId: checkoutId
+      sessionId: res.data.id
     }).then(function (result) {
     });
   })
