@@ -4,8 +4,8 @@ const mainLearn = document.querySelector('.mainLearn');
 const learnContainer = document.querySelector('.learn');
 const learnModal = document.querySelector('.learnModal')
 
-const successContainer = document.querySelector('.learn');
-const successModal = document.querySelector('.learnModal')
+const successContainer = document.querySelector('.success');
+const successModal = document.querySelector('.successModal')
 
 var stripe = Stripe('pk_test_xHRpxlEEuqhhZgNUNreokbnt00FD8RZCGn');
 
@@ -56,7 +56,7 @@ $(document.body).on('click', (e) => {
 })
 
 let audioPlaying = false;
-var audio = new Audio('./assets/glasstown.mp3');
+var audio = new Audio('/assets/glasstown.mp3');
 function startAudio(){
   if(!audioPlaying){
     audioPlaying = true;
@@ -68,7 +68,7 @@ const robots = {
 
   one : {
     video : 'https://www.youtube.com/embed/86jfIiBGWqw',
-    thumbnail : './assets/robot1.png',
+    thumbnail : '/assets/robot1.png',
     name : "Kiwi Robot",
     description : "Kiwi delivers food and medical supplies to those around its area.",
     price: 10000

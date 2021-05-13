@@ -7,7 +7,7 @@ var server = require('http').Server(app);
 
 app.set('views', 'client')
 app.set('view engine', 'pug');
-app.use(express.json())
+// app.use(express.json())
 app.use(express.static('client'));
 app.use(bodyParser.json({ 
   limit: '50mb',

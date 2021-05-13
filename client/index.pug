@@ -1,4 +1,4 @@
-link(rel='stylesheet' href='./index.css')
+link(rel='stylesheet' href='/index.css')
 
 head
   title AI-AI
@@ -13,13 +13,13 @@ body
     
     .topContent
       .one.featured#one
-        img.featuredImg(src='./assets/robot1.png')
+        img.featuredImg(src='/assets/robot1.png')
       .two.featured#two
-        img.featuredImg(src='./assets/miim.png')
+        img.featuredImg(src='/assets/miim.png')
       .three.featured#three
-        img.featuredImg(src='./assets/pepper.png')
+        img.featuredImg(src='/assets/pepper.png')
       .four.featured#four
-        img.featuredImg(src='./assets/full-nao.png')
+        img.featuredImg(src='/assets/full-nao.png')
       
     .main
       .mainTitle AI-AI
@@ -42,13 +42,13 @@ body
       
     .bottomContent
       .five.featured#five
-        img.featuredImg(src='./assets/sophia-new.png')
+        img.featuredImg(src='/assets/sophia-new.png')
       .six.featured#six
-        img.featuredImg(src='./assets/mark1-new.png')
+        img.featuredImg(src='/assets/mark1-new.png')
       .seven.featured#seven
-        img.featuredImg(src='./assets/jiajia-new.png')
+        img.featuredImg(src='/assets/jiajia-new.png')
       .eight.featured#eight
-        img.featuredImg(src='./assets/titan.png')
+        img.featuredImg(src='/assets/titan.png')
     
     .featuredContainer
       .featuredModal
@@ -64,11 +64,11 @@ body
     .footer
 
 script(src="https://js.stripe.com/v3/")
-script(src='./scripts/money-input.min.js')
-script(src="./scripts/axios.min.js")
+script(src='/scripts/money-input.min.js')
+script(src="/scripts/axios.min.js")
 script(src="https://aframe.io/releases/1.0.4/aframe.min.js")
 script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-script(src="./index.js")
+script(src="/index.js")
 
 
 .aframe
@@ -78,7 +78,7 @@ script(src="./index.js")
     //-   a-asset-item(id="city-mtl" src="./assets/city.mtl")
     //- a-entity(obj-model="obj: #city-obj; mtl: #city-mtl" rotation="0 90 0" position="0 0 -6" scale="0.15 0.15 0.15")
     a-assets
-      a-asset-item(id="city" src="./assets/city.glb")
+      a-asset-item(id="city" src="/assets/city.glb")
     a-entity(
       gltf-model="#city"
       rotation="0 90 0"
@@ -87,7 +87,7 @@ script(src="./index.js")
       material="shader: flat; color: #fff"
     )
     a-entity(light="type: directional; color: #FFF; intensity: 3" position="-137 65 5")
-    a-sky(src="./assets/galactic.jpg" repeat="10 10")
+    a-sky(src="/assets/galactic.jpg" repeat="10 10")
     a-box(position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9")
     a-camera(position="-35 24 35")
   
