@@ -1,8 +1,13 @@
+const checkoutSuccess = JSON.parse(document.querySelector('#successData').textContent || false);
+
 const mainLearn = document.querySelector('.mainLearn');
 const learnContainer = document.querySelector('.learn');
 const learnModal = document.querySelector('.learnModal')
 
-var stripe = Stripe('pk_live_1XL5FBTM409USMd6lEcG5yDf00FE5Qacfj');
+const successContainer = document.querySelector('.learn');
+const successModal = document.querySelector('.learnModal')
+
+var stripe = Stripe('pk_test_xHRpxlEEuqhhZgNUNreokbnt00FD8RZCGn');
 
 mainLearn.addEventListener('click', () => {
   learnContainer.style.display = 'flex';
@@ -11,6 +16,15 @@ mainLearn.addEventListener('click', () => {
 learnContainer.addEventListener('click', (e) => {
   if(e.target !== learnModal && !learnModal.contains(e.target)){
     learnContainer.style.display = 'none';
+  };
+})
+
+if(checkoutSuccess){
+  successContainer.style.display = "flex";
+}
+successContainer.addEventListener('click', (e) => {
+  if(e.target !== successModal && !successModal.contains(e.target)){
+    successContainer.style.display = 'none';
   };
 })
 
@@ -119,6 +133,16 @@ $('.featured').on('click', (e) => {
   $('.featuredName').text(robot.name);
   $('.featuredDesc').text(robot.description);
   $('.buyPrice').text(`Selling at $${robot.price}`);
+  $('.buyBtn').off('click');
+  $('.buyBtn').on('click', async (e) => {
+    const checkoutId = (await axios.post('/order/checkout', {
+      robotNum
+    });
+    stripe.redirectToCheckout({
+      sessionId: checkoutId
+    }).then(function (result) {
+    });
+  })
 })
 
 $('.featuredContainer').on('click', (e) => {

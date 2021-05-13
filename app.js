@@ -1,12 +1,21 @@
 const express = require('express');
 const app = express();
-const stripe = require('stripe')(process.env.STRIPE_SECRET || 'sk_test_AD06t8AX4i615N3hTdrlUAvv00LVhgyd3Y');
+const stripe = require('stripe')(process.env.STRIPE_SECRET);
+const robots = require('./robots');
+const bodyParser = require('body-parser');
 var server = require('http').Server(app);
 
 app.set('views', 'client')
 app.set('view engine', 'pug');
 app.use(express.json())
 app.use(express.static('client'));
+app.use(bodyParser.json({ 
+  limit: '50mb',
+  extended: true,
+  verify: (req, res, buf) => {
+   req.rawBody = buf
+  } 
+}));
 
 // let checkAuth = function (req, res, next) {
 //   if (typeof req.cookies.userToken === 'undefined' || req.cookies.userToken === null) {
@@ -52,6 +61,52 @@ app.post('/fund', (req, res) => {
   }
   createStripeSession();
 });
+
+app.post('/order/checkout', async (req, res) => {
+  const num = req.body.robotNum;
+  if(!num) return;
+  const session = await stripe.checkout.sessions.create({
+    success_url: 'https://ai-ai.market/checkout/success',
+    cancel_url: 'https://ai-ai.market/',
+    payment_method_types: ['card'],
+    mode: 'payment',
+    line_items: [
+      {
+        name: robots[num].name,
+        description: 'AI-AI Robot Order',
+        amount: robots[num].price * 100,
+        currency: 'usd',
+        quantity: 1,
+      },
+    ],
+    shipping_address_collection: {
+      allowed_countries: ['US', 'CA'],
+    },
+  })
+  res.send({id : session.id});
+})
+
+app.post('/stripe/webhook', async(req, res) => {
+  console.log("IN WEBHOOK");
+  const sig = req.headers['stripe-signature'];
+  let event;
+  try {
+    event = stripe.webhooks.constructEvent(req.rawBody, sig, process.env.STRIPE_WEBHOOK_SECRET);
+  } catch (err) {
+    console.log(err);
+    return res.status(400).send(`Webhook Error: ${err.message}`);
+  }
+  if (event.type === 'payment_intent.succeeded') {
+    console.log("PAYMENT SUCCESS")
+    const data = event.data.object;
+    console.log(data);
+  }
+  res.json({received: true});
+})
+
+app.get('/checkout/success', async(req, res) => {
+  res.render('index.pug', {checkoutSuccess: true});
+})
 
 
 server.listen(process.env.PORT || '3001', () => {

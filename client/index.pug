@@ -2,6 +2,8 @@ link(rel='stylesheet' href='./index.css')
 
 head
   title AI-AI
+  script(src="https://js.stripe.com/v3/")
+  #successData(hidden)=JSON.stringify(checkoutSuccess)
   
 body
 
@@ -34,6 +36,9 @@ body
           .learnDesc Positive mindset completes Active creation
           .learnDesc Let us warmly welcome Robot friends to join our earth community's big Garden
           .learnEmail Contact Us at AiAiRobots@gmail.com
+      .success
+        .successModal 
+          .successHeader Your Order Has Gone Through Succesfully!
       
     .bottomContent
       .five.featured#five
