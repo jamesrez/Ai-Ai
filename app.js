@@ -66,8 +66,8 @@ app.post('/order/checkout', async (req, res) => {
   const num = req.body.robotNum;
   if(!num) return;
   const session = await stripe.checkout.sessions.create({
-    success_url: 'https://ai-ai.market/checkout/success',
-    cancel_url: 'https://ai-ai.market/',
+    success_url: 'https://aiai.market/checkout/success',
+    cancel_url: 'https://aiai.market/',
     payment_method_types: ['card'],
     mode: 'payment',
     line_items: [
