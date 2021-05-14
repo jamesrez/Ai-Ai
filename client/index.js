@@ -7,7 +7,7 @@ const learnModal = document.querySelector('.learnModal')
 const successContainer = document.querySelector('.success');
 const successModal = document.querySelector('.successModal')
 
-var stripe = Stripe('pk_test_xHRpxlEEuqhhZgNUNreokbnt00FD8RZCGn');
+var stripe = Stripe('pk_live_1XL5FBTM409USMd6lEcG5yDf00FE5Qacfj');
 
 mainLearn.addEventListener('click', () => {
   learnContainer.style.display = 'flex';
